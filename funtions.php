@@ -22,4 +22,8 @@
 	    return "vi_VN";
 	}
 
+	/* SET DEFAULT MẶC ĐỊNH FONT ARIA PLUGIN TINYMCE */
+
+	add_editor_style('editor-style.css');
+
 ?>
