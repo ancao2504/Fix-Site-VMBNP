@@ -26,4 +26,13 @@
 
 	add_editor_style('editor-style.css');
 
+	/* SORT POSTS MỚI NHẤT */
+	function orderby_modified_posts( $query ) {
+	    if( is_admin() ) {
+		    $query->set( 'orderby', 'date' );
+	        $query->set( 'order', 'desc' );
+	    }
+	}
+	add_action( 'pre_get_posts', 'orderby_modified_posts' );
+
 ?>
